@@ -5,10 +5,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 
 private const val ROW_UNIT_SIZE = 3
@@ -18,7 +20,9 @@ private const val IMAGE_TEN_PATH = "Babylonian_10.svg"
 
 @Composable
 fun OutputScreen(output: String) {
-    Text(output)
+    SelectionContainer {
+        Text(output, fontFamily = FontFamily.Monospace)
+    }
 }
 
 @Composable
